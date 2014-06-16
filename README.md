@@ -10,6 +10,7 @@ the row format.
 
 add jar /home/hadoop/aws-logs-serde.jar;
 
+```
 create table s3_accesslogs(
 bucketowner             string,
 bucketname              string,
@@ -32,6 +33,7 @@ versionid               string
 )
 ROW FORMAT SERDE 'com.amazonaws.hive.serdes.s3.S3LogDeserializer'
 LOCATION 's3://<yours3bucket>/<yourprefixifany>/';
+```
 
 
 ### Status
