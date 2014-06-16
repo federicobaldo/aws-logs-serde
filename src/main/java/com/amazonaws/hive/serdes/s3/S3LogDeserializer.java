@@ -3,11 +3,6 @@ package com.amazonaws.hive.serdes.s3;
 /**
  * Created by fbaldo on 30/05/14.
  */
-import java.nio.charset.CharacterCodingException;
-import java.util.List;
-import java.util.Properties;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -21,9 +16,13 @@ import org.apache.hadoop.io.BytesWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.io.Writable;
 
+import java.nio.charset.CharacterCodingException;
+import java.util.Properties;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  * S3LogDeserializer.
- *
  */
 public class S3LogDeserializer extends AbstractDeserializer {
 
@@ -62,13 +61,14 @@ public class S3LogDeserializer extends AbstractDeserializer {
     }
 
     public static Integer toInt(String s) {
-        s = s.replace("\"","");
+        s = s.replace("\"", "");
         if (s.compareTo("-") == 0) {
             return null;
         } else {
             return Integer.valueOf(s);
         }
     }
+
     // Number of rows not matching the regex
     long unmatchedRows = 0;
 
@@ -85,16 +85,16 @@ public class S3LogDeserializer extends AbstractDeserializer {
             c.requestid = match.group(t++);
             c.operation = match.group(t++);
             c.rkey = match.group(t++);
-            c.requesturi = match.group(t++).replace("\"","");
+            c.requesturi = match.group(t++).replace("\"", "");
             c.httpstatus = toInt(match.group(t++));
             c.errorcode = match.group(t++);
             c.bytessent = toInt(match.group(t++));
             c.objsize = toInt(match.group(t++));
             c.totaltime = toInt(match.group(t++));
             c.turnaroundtime = toInt(match.group(t++));
-            c.referer = match.group(t++).replace("\"","");
-            c.useragent = match.group(t++).replace("\"","");
-            c.versionid =  match.group(t++);
+            c.referer = match.group(t++).replace("\"", "");
+            c.useragent = match.group(t++).replace("\"", "");
+            c.versionid = match.group(t++);
         } catch (Exception e) {
             LOG.error(new StringBuilder().append("Unmatched row found: ").append(row).append(" | ").append(e.toString()).toString());
             unmatchedRows++;

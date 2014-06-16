@@ -1,11 +1,6 @@
 package com.amazonaws.hive.serdes.s3;
-
-/**
- * Created by fbaldo on 30/05/14.
- */
 /**
  * S3LogStruct.
- *
  */
 public class S3LogStruct {
 

@@ -10,8 +10,6 @@
 
     <properties>
         <!-- Test Properties -->
-        <test.extra.path></test.extra.path>
-
         <test.log4j.scheme>file://</test.log4j.scheme>
         <test.tmp.dir>${project.build.directory}/tmp</test.tmp.dir>
         <test.tmp.dir.uri>file://${test.tmp.dir}</test.tmp.dir.uri>
@@ -119,11 +117,6 @@
         </dependency>
         <dependency>
             <groupId>org.apache.hive</groupId>
-            <artifactId>hive-serde</artifactId>
-            <version>${hive.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.hive</groupId>
             <artifactId>hive-shims</artifactId>
             <version>${hive.version}</version>
         </dependency>
@@ -192,7 +185,6 @@
         <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
         <testSourceDirectory>${basedir}/src/test</testSourceDirectory>
     </build>
-
 
 
 </project>
