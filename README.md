@@ -5,7 +5,7 @@ Hive deserializer for various Aws log formats.
 
 ### Usage
 
-Download the latest release from https://github.com/federicob/aws-logs-serde/releases directly on your Hive client.
+Download the latest release from [here](https://github.com/federicob/aws-logs-serde/releases/latest directly) on your Hive client.
 
 Inside your script or from the Hive interactive shell you should add first the jar and then create the table specifying
 the row format.
