@@ -5,11 +5,13 @@ Hive deserializer for various Aws log formats.
 
 ### Usage
 
+Download the latest release from https://github.com/federicob/aws-logs-serde/releases directly on your Hive client.
+
 Inside your script or from the Hive interactive shell you should add first the jar and then create the table specifying
 the row format.
 
 ```
-add jar /home/hadoop/aws-logs-serde.jar;
+add jar /home/hadoop/aws-logs-serde-0.1.jar;
 
 create table s3_accesslogs(
 bucketowner             string,
