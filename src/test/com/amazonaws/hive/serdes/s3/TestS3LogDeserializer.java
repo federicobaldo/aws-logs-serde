@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Properties;
 
 /**
- * TestRegexSerDe.
+ * TestS3LogDeserializer
  */
 public class TestS3LogDeserializer extends TestCase {
 
@@ -33,7 +33,7 @@ public class TestS3LogDeserializer extends TestCase {
 
 
     /**
-     * Test the LazySimpleSerDe class.
+     * Test the S3LogDeserializer class.
      */
     public void testRegexSerDe() throws Throwable {
         try {
