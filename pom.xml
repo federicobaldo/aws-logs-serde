@@ -39,7 +39,7 @@
         <hbase.hadoop1.version>0.96.0-hadoop1</hbase.hadoop1.version>
         <hbase.hadoop2.version>0.96.0-hadoop2</hbase.hadoop2.version>
         <hive.version>0.13.0</hive.version>
-        <junit.version>4.10</junit.version>
+        <junit.version>4.13.1</junit.version>
     </properties>
 
     <dependencies>
